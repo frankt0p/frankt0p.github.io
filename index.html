@@ -1,27 +1,16 @@
 ---
-layout: home
-title: "Frank Wu 的博客"
-permalink: /
-author_profile: true       # 显示侧边栏
-hero:
-  image: /assets/images/profile.jpg
-  tagline: "计算机硕士 · Java & Android 开发爱好者"
+title: Home
+lang: en
 ---
 
-<section class="intro">
-  <h2>欢迎来到我的博客！</h2>
-  <p>这里记录我的学习笔记、项目分享和技术随想。</p>
-</section>
+# Welcome to my blog
 
-<section class="recent-posts">
-  <h2>最新文章</h2>
-  <ul>
-    {% for post in site.posts limit:5 %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-  <p><a href="/archive/">查看所有文章 →</a></p>
-</section>
+This is a sample homepage using a custom Jekyll theme (English first).
+
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
+    </li>
+  {% endfor %}
+</ul>

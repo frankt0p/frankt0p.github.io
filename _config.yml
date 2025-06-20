@@ -1,3 +1,22 @@
-plugins:
-  - jekyll-include-cache
-remote_theme: "mmistakes/minimal-mistakes@4.27.1"
+# 站点基础信息（主要英文）
+title: "Frank Wu's Blog"
+description: "Tech notes and life stories"
+baseurl: ""       # 若部署在子路径则填写，如 /repo-name
+environment: production
+
+theme: null        # 不使用内置或远程主题
+plugins: []
+
+# 预设语言配置，方便未来一键翻译
+languages:
+  - en
+  - zh
+default_lang: en
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+      lang: "en"
