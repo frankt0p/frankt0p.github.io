@@ -11,12 +11,3 @@ plugins: []
 languages:
   - en
   - zh
-default_lang: en
-
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: default
-      lang: "en"

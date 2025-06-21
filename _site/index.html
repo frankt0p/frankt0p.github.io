@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home | Frank Wu's Blog</title>
+  <title>Home | frankt0p.github.io</title>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body data-lang="en">
   <header class="site-header">
   <div class="container">
     <h1 class="site-title">
-      <a href="/">Frank Wu's Blog</a>
+      <a href="/">Feiran Wu's Homepage</a>
     </h1>
     <nav class="site-nav">
       <a href="/">Home</a>
       <a href="/about/">About</a>
+      <a href="/projects/">Projects</a>
       <a href="/archive/">Archive</a>
+    
     </nav>
     <div class="lang-switch">
       <button id="lang-toggle">中文</button>
@@ -23,25 +25,53 @@
   </div>
 </header>
   <main class="site-content">
-    # Welcome to my blog
+    <section class="home-grid">
+  <!-- 左栏：博客列表 -->
+  <div class="blog-list">
+    <h2>Blog Posts</h2>
+    <ul>
+      
+        <li>
+          <a href="/2025/06/21/decorate.html">Trying to decorate my website.</a>
+          <span class="post-date">2025-06-21</span>
+        </li>
+      
+        <li>
+          <a href="/2025/06/20/start.html">A new start to build my website!</a>
+          <span class="post-date">2025-06-20</span>
+        </li>
+      
+        <li>
+          <a href="/2025/01/03/try.html">TRY</a>
+          <span class="post-date">2025-01-03</span>
+        </li>
+      
+    </ul>
+  </div>
 
-This is a sample homepage using a custom Jekyll theme (English first).
-
-<ul>
-  
-    <li>
-      <a href="/2025/01/03/start.html">Start</a> - 2025-01-03
-    </li>
-  
-    <li>
-      <a href="/2025/01/03/try.html">TRY</a> - 2025-01-03
-    </li>
-  
-</ul>
+  <!-- 右栏：项目卡片 -->
+  <div class="project-list">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <!-- 例：手动写项目卡片，或如你前面那样拷贝过来 -->
+      <a class="project-card" href="/projects/project1.html">
+        <img class="project-image" src="assets/images/background1.png"
+             alt="Project 1">
+        <p class="project-desc">project 1</p>
+      </a>
+      <a class="project-card" href="/projects/project2.html">
+        <img class="project-image" src="/assets/images/project2.png"
+             alt="Project 2">
+        <p class="project-desc">project 2</p>
+      </a>
+      <!-- …更多项目卡片… -->
+    </div>
+  </div>
+</section>
   </main>
   <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2025 Frank Wu's Blog. All rights reserved.</p>
+    <p>&copy; 2025 frankt0p.github.io. All rights reserved.</p>
   </div>
 </footer>
   <script src="/assets/js/translate.js"></script>

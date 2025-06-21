@@ -4,22 +4,48 @@ body {
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
-  padding: 1rem;
-  background: #fafafa;
-  color: #333;
+  padding: 0;
+  /* 黑色底色 */
+  background-color: #000;
+  background-size: auto;
+  color: #ffffff;
 }
 .container { width: 100%; margin: 0 auto; }
 .site-header {
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 2rem;
-  padding-bottom: 0.5rem;
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;            /* 视口宽度 */
+  background-color: #000000;
+  z-index: 100;
+
 }
-.site-title a { text-decoration: none; color: #333; }
+.site-title a { text-decoration: none; color: #ffffff; }
+.site-title {
+  text-align: center;  /* 把内部的 <a> 居中 */
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;  /* 水平居中所有链接 */
+  align-items: center;      /* 垂直居中（如果有高度需求） */
+  gap: 1rem;                /* 每个链接之间的间距 */
+  padding: 0;               /* 去掉可能的 ul/padding */
+  margin: 0;                /* 去掉可能的 ul/margin */
+  list-style: none;         /* 如果是 ul，去掉默认圆点 */
+}
 .site-nav a {
-  margin-right: 1rem;
+  display: inline-block;    /* 让宽度生效 */
+  width: 120px;             /* 固定宽度，按需调整 */
+  text-align: center;       /* 文字居中 */
+  padding: .5rem 0;         /* 上下内边距，不要左右 padding */
+  border: 1px solid #26FFDF;       /* 边框颜色可以自定 */
+  background-color: #26FFDF;         
   text-decoration: none;
-  color: #555;
+  color: #2a2a2a;
+  transition: background-color .2s, color .2s;
 }
 .site-nav a:hover { color: #000; }
 .lang-switch {
@@ -28,8 +54,8 @@ body {
   right: 0;
 }
 .lang-switch button {
-  background: none;
-  border: 1px solid #555;
+  border: 1px solid #26FFDF;       /* 边框颜色可以自定 */
+  background-color: #26FFDF;
   padding: 0.2rem 0.5rem;
   cursor: pointer;
 }
@@ -41,3 +67,89 @@ body {
   font-size: 0.9rem;
   color: #777;
 }
+
+/* projects 模块 */
+.project-list h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+
+}
+.projects-page {
+  padding: 3rem 2rem;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  display: block;
+  border: 1px solid #26FFDF;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.project-desc {
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-align: center;
+}
+.project-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* 首页两栏布局 */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+/* 博客列表 */
+.blog-list ul {
+  list-style: none;
+  padding: 0;
+}
+.blog-list h2{
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.blog-list li {
+  margin-bottom: 0.75rem;
+}
+.blog-list a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color .2s;
+}
+.blog-list a:hover {
+  color: #007acc;
+}
+.post-date {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
